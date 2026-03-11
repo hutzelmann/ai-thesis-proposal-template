@@ -12,7 +12,7 @@ Help students write a convincing thesis proposal.
 
 The preamble in `proposal.tex` should include the following:
 
-- The document class declaration, which should be `\documentclass[usebib]{compactarticle}`.
+- The document class declaration, which should be `\documentclass[usebib]{compactarticle}` and might include further options, e.g. `\documentclass[usebib,embedsources]{compactarticle}` to embed source files into the PDF.
 - `\usepackage[english]{babel}` for English or `\usepackage[german]{babel}` for German.
 - The title and author declarations using `\title{}` and `\author{}` stating the title of the thesis and the name of the student working on the thesis.
 - The title should be concise and informative, and should not include any technical terms or details that are not widely known in computer science.

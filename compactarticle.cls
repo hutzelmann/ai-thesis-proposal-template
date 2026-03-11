@@ -11,6 +11,11 @@
 \@usebibfalse
 \DeclareOption{usebib}{\@usebibtrue}
 
+% Adding emdedsources option for embedding source files into the PDF
+\newif\if@embedsources
+\@embedsourcesfalse
+\DeclareOption{embedsources}{\@embedsourcestrue}
+
 \ProcessOptions\relax
 
 \LoadClass[11pt]{article}
@@ -88,6 +93,15 @@
 
 % Add a very simple command for TODO
 \newcommand{\todo}[1]{\textbf{\textcolor{orange}{TODO:~#1}}\xspace}
+
+% Embed all source files to the pdf
+\if@embedsources
+  \usepackage{embedfile}
+  \embedfile{\jobname.tex}
+  \IfFileExists{literature.bib}{\embedfile{literature.bib}}{}
+  \IfFileExists{AGENTS.md}{\embedfile{AGENTS.md}}{}
+  \IfFileExists{compactarticle.cls}{\embedfile{compactarticle.cls}}{}
+\fi
 
 % Provide a nice euro symbol
 \RequirePackage{eurosym}
