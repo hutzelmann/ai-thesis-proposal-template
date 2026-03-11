@@ -40,7 +40,7 @@
 
 % Add a minimal bibliography (optional via class option usebib)
 \if@usebib
-  \usepackage[style=numeric-comp,uniquename=init, maxcitenames=2, minbibnames=5, maxbibnames=5, giveninits=true,doi=true]{biblatex}
+  \usepackage[style=numeric-comp,uniquename=init, maxcitenames=1, minbibnames=5, maxbibnames=5, giveninits=true,doi=true]{biblatex}
   \nocite{*}
   \let\oldciteauthor\citeauthor
   \renewcommand{\citeauthor}[1]{\oldciteauthor{#1}\xspace\cite{#1}}
